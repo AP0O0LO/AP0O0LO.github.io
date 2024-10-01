@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Viewer</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        model-viewer {
+            width: 80%;
+            height: 60vh;
+        }
+
+        #ar-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #ar-button:hover {
+            background-color: #0056b3;
+        }
+
+        #ar-prompt {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .progress-bar {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <model-viewer src="musical_box_-_game_of_thrones.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
+        <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+        </div>
+    </model-viewer>
+
+    <button id="ar-button">
+        Analiza
+    </button>
+
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png" alt="AR Prompt">
+    </div>
+
+    <!-- Import the component -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</body>
+</html>
