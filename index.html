@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- liea para internet compatible con los antiguos y nuevos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Ukun </title>
+     <!--- libreria de iconos  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+     <!-- Estilos CSS para header, body y footer -->
+    <link rel="stylesheet" href="ar/css/style.css">
+    
+    <!-- Importar el visor de modelo 3D -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+
+     
+</head>
+<body>
+
+    <!-- Sección del HEADER -->
+<header class="header">
+    <a href="#" class="logo">
+        <img src="ar/imagen/logo2.jpg" alt="Logo UKUN">
+    </a>
+    <nav class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="Nosotros.html">Nosotros</a>
+        <a href="Productos.html">Productos</a>
+        <a href="Servicios.html">Servicios</a>
+        <a href="Proyectos.html">Proyectos</a>
+        <a href="Contacto.html">Contacto</a>   
+    </nav>
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div> 
+</header>
+
+<!-- Sección del contenido de la página -->
+<main class="productos-body" >
+        <!-- Seccion de Productos -->
+        <section class="menu" id="menu">
+            <h1 class="heading"> PRODUCTOS EN <span> REALIDAD AUMENTADA  </span> </h1>
+            <div class="box-container">
+
+                <div class="box">
+                    <img src="salacomedor/imagen/menu-1.png" alt="">
+                    <h3>Cómoda Happy Mimbre Ratán 5 niveles Polinplast</h3>
+                    <div class="price">S/ 150 </div>
+                    <a href="#" class="btn" onclick="openModal('modal1')" >Ver Mas</a>
+                </div>
+
+                         
+            </div>
+        </section>
+</main>
+
+<!------------- Ventanas modales -------------->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <!-- Sección que contiene el visor 3D y el texto -->
+        <div class="modal-body">
+            <!-- Inicia la sección del visor 3D -->
+            <!-- Cambiado: Aquí reemplazamos el slider por el visor 3D -->
+            <div class="modal-3d-viewer">
+                <!-- Contenido del visor 3D -->
+                <model-viewer 
+                    src="ar/imagen/escritorio.glb" 
+                    ar 
+                    ar-modes="scene-viewer webxr quick-look" 
+                    camera-controls 
+                    tone-mapping="neutral" 
+                    poster="poster.webp" 
+                    shadow-intensity="1" 
+                    autoplay>
+                    <div class="progress-bar hide" slot="progress-bar">
+                        <div class="update-bar"></div>
+                    </div>
+                </model-viewer>
+            </div>
+            <!-- Fin de la sección del visor 3D -->
+
+            <!-- Contenido al lado del visor 3D -->
+            <div class="modal-description">
+                <!-- Título y precio centrados -->
+                <h2>Juego de Comedor Abelia - Mesa Redonda con 4 Sillas</h2>
+                <p class="price">S/6,900.00 PEN</p>
+
+                <!-- Descripción y consideraciones alineados a la izquierda -->
+                <p class="description"><strong>Descripción:</strong> El Juego de Comedor Abelia es la elección perfecta para quienes buscan combinar estilo y 
+                    funcionalidad en su hogar. Este conjunto incluye una mesa redonda elegantemente diseñada y cuatro sillas con bases de metal, 
+                    creando un equilibrio perfecto entre modernidad y encanto vintage.</p>
+                <p class="considerations"><strong>Consideraciones:</strong> Imágenes referenciales, los colores pueden variar según 
+                    la configuración de tu pantalla, o sombras.</p>
+
+                <!-- Tabla de especificaciones -->
+                <div class="specifications">
+                    <h3>Especificaciones</h3>
+                    <hr>
+                    <div class="spec-item">
+                        <span class="spec-title">Modelo</span>
+                        <span class="spec-value">ALASKA BEIGE</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-title">Material </span>
+                        <span class="spec-value">Chenille</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-title">Medidas</span>
+                        <span class="spec-value">195 alto - 147 ancho - 98 largo cm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-title">Peso</span>
+                        <span class="spec-value">150 kg</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-title">Colores</span>
+                        <span class="spec-value">variado</span>
+                    </div>   
+                </div>
+            </div>
+        </div>
+        <div class="button-container"><a href="https://wa.me/988240890?text=Buenas,%20quisiera%20saber%20más" target="_blank"><button class="custom-button">Deseo Esto</button></a></div>
+    </div>
+</div>
+
+<!-- --------- Fin de ventan modal  ----------->
+
+
+
+
+<!-- Sección del FOOTER -->
+<footer>
+        <section class="footer">
+            <div class="share">
+                <a href="https://www.facebook.com/profile.php?id=100092439151015" class="fab fa-facebook-f"></a>
+                <a href="https://www.tiktok.com/@estudio.ukun" class="fab fa-tiktok"></a>
+                <a href="https://www.instagram.com/estudioukun/" class="fab fa-instagram"></a>
+            </div>
+        
+            <div class="credit">
+                DISEÑO DE INTERIORES <span>UKUN</span> | Todos los derechos reservados
+            </div>
+        </section>
+</footer>
+
+<a href="https://wa.me/988240890" class="whatsapp_float" target="_blank">
+    <i class="fab fa-whatsapp"></i></a>
+
+<!-- Enlace JS para funcionalidades -->
+<script src="ar/js/script.js"></script>
+
+</body>
+</html>
